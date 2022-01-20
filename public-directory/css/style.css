@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+.noSelect {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .noSelect:focus {
+    outline: none !important; }
+
+*::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.6%; }
+
+body {
+  box-sizing: border-box; }
+
+/* Cool Css Custom animations */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem); }
+  40% {
+    opacity: 0.2; }
+  80% {
+    transform: translateY(2rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem); }
+  40% {
+    opacity: 0.2; }
+  80% {
+    transform: translateY(-2rem); }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+@keyframes hideAtStart {
+  0% {
+    opacity: 0;
+    visibility: hidden; }
+  60% {
+    opacity: 0;
+    visibility: hidden; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+body {
+  font-family: "Lato",sans-serif;
+  font-size: 1.6rem;
+  /* font-size: 16px; */
+  box-sizing: border-box;
+  color: #777;
+  padding: 1rem;
+  line-height: 1.7; }
+
+/* heading primary */
+.header__text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* for BUTTON */
+  text-align: center; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  /* To hide the shake of transition */
+  backface-visibility: hidden;
+  /* for button */
+  margin-bottom: 4rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-iteration-count: number of times animation will run */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.85rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+
+/* Navigation Settings */
+.header__navigation {
+  position: absolute;
+  top: 5.5rem;
+  left: 49rem; }
+
+.nav-bar {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: white .2rem solid;
+  border-bottom: #fff 0.2rem solid; }
+  .nav-bar--links:link, .nav-bar--links:visited {
+    text-decoration: none;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    font-weight: 500; }
+  .nav-bar--links:hover {
+    background-color: #fff;
+    color: #777;
+    transition: all .4s; }
+
+.project-section__title {
+  text-align: center; }
+
+.heading-secondary {
+  display: inline-block;
+  align-self: right;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 8rem;
+  background-image: linear-gradient(to right, rgba(253, 29, 29, 0.8), rgba(255, 255, 28, 0.8));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+  transition: all .2s ease-in; }
+  .heading-secondary:hover {
+    transform: scale(1.2);
+    text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.5);
+    animation-duration: 1s; }
+
+.heading-tertiary {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+#flex-container-fix {
+  transform: skewY(0deg); }
+
+.align-fix {
+  text-align: center; }
+
+/* BUTTON */
+.btn {
+  /* BUTTON ANIMATION */ }
+  .btn:link, .btn:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    /* for BUTTONS animation */
+    position: relative;
+    transition: all .2s ease-out; }
+  .btn--animated {
+    animation-name: hideAtStart;
+    animation-duration: 2s;
+    /* apply the custom animation styles of 0 %  brefore it starts */
+    animation-fill-mode: backwards; }
+  .btn:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); }
+  .btn:active {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4); }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: white; }
+  .btn::after {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s ease-out; }
+  .btn:hover::after {
+    transform: scale(1.4);
+    opacity: 0; }
+
+.btn-s:link, .btn-s:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #777;
+  padding: .5rem .8rem;
+  border-bottom: 1px solid #00c3ff;
+  text-transform: capitalize;
+  transition: all .3s ease-in-out;
+  font-weight: 700; }
+
+.btn-s:hover {
+  background-color: #00c3ff;
+  color: #fff; }
+
+.album {
+  position: relative; }
+  .album img {
+    width: 45%;
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.5);
+    position: absolute;
+    transition: all .4s ease-in-out; }
+    .album img:hover {
+      outline: 1rem solid #00c3ff;
+      outline-offset: 1rem;
+      transform: scale(1.2);
+      box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.5);
+      z-index: 2; }
+  .album__1 {
+    top: -3rem;
+    left: 8%; }
+  .album__2 {
+    top: 3%;
+    left: 45%; }
+  .album__3 {
+    top: 37%;
+    left: 28%; }
+  .album:hover .album-img:not(:hover) {
+    transform: scale(0.8); }
+
+.flex-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  transform: skewY(8deg); }
+
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  width: 20%;
+  box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.3);
+  transition: all .4s;
+  text-align: center; }
+  .card--font {
+    display: inline-block;
+    font-size: 8rem;
+    background-image: linear-gradient(to right, rgba(253, 29, 29, 0.8), rgba(255, 255, 28, 0.8));
+    -webkit-background-clip: text;
+    color: transparent; }
+  .card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 1rem 2rem 2rem rgba(0, 0, 0, 0.4); }
+
+.card-container {
+  width: 24%; }
+
+.d3-card {
+  height: 50rem;
+  position: relative;
+  perspective: 150rem;
+  -moz-perspective: 150rem; }
+  .d3-card__side {
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all 1s ease-in-out;
+    box-shadow: 0.5rem 1rem 1.5rem rgba(0, 0, 0, 0.4); }
+    .d3-card__side--front {
+      transform: translateZ(2.5rem);
+      transform: rotateY(0); }
+    .d3-card__side--back {
+      transform: rotateY(180deg); }
+      .d3-card__side--back--1 {
+        background-image: linear-gradient(to right, rgba(3, 0, 30, 0.6), rgba(115, 3, 192, 0.6), rgba(236, 56, 188, 0.6)); }
+      .d3-card__side--back--2 {
+        background-image: linear-gradient(to right, rgba(102, 125, 182, 0.6), rgba(253, 187, 45, 0.6)); }
+      .d3-card__side--back--3 {
+        background-image: linear-gradient(to right, rgba(178, 31, 31, 0.6), rgba(253, 187, 45, 0.6)); }
+  .d3-card:hover .d3-card__side--front {
+    transform: rotateY(-180deg); }
+  .d3-card:hover .d3-card__side--back {
+    transform: rotateY(0deg); }
+
+.project-section {
+  padding-top: 18rem;
+  padding-bottom: 25rem;
+  background-color: #f7f7f7;
+  margin-top: -15.5rem;
+  width: 100%; }
+  .project-section__data {
+    display: flex;
+    justify-content: space-evenly; }
+    .project-section__data--content {
+      width: 45%; }
+    .project-section__data--album {
+      width: 45%; }
+
+.section-services {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right, rgba(0, 195, 255, 0.8), rgba(255, 255, 28, 0.6)), url(../img/apex-header-cover.jpg);
+  background-position: right;
+  background-size: cover;
+  transform: skewY(-8deg);
+  margin-top: -9rem; }
+
+.section-3d-card {
+  padding-top: 25rem;
+  padding-bottom: 50rem;
+  margin-top: -8rem;
+  background-color: #f7f7f7; }
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(0, 195, 255, 0.8), rgba(255, 255, 28, 0.6)), url(../img/apex-header-cover.jpg);
+  background-size: cover;
+  background-position: right;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+  /* Logo Settings */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 8rem; }
