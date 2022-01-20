@@ -1,0 +1,28 @@
+.card{
+    background-color: rgba(white, 0.8);
+    padding: 1.5rem;
+    width: 20%;
+
+    box-shadow: .5rem 1rem 1.5rem rgba(black, 0.3);
+
+    transition: all .4s;
+    text-align: center;
+
+    &--font{
+        display: inline-block;
+        font-size: 8rem;
+
+        background-image: linear-gradient(to right,
+        rgba($secondary-color, .8),
+        rgba($tertiary-color, .8));
+        -webkit-background-clip: text;
+        color: transparent;
+        
+    }
+
+    &:hover{
+        transform: translateY(-1rem);
+        box-shadow: 1rem 2rem 2rem rgba(black, .4);
+    }
+
+}

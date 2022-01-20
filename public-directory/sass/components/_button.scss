@@ -1,0 +1,84 @@
+    /* BUTTON */
+    
+    .btn{
+        &:link,
+        &:visited{
+            text-decoration: none;
+            text-transform: uppercase;
+            display: inline-block;
+            padding: 1.5rem 3rem;
+        
+            /* for BUTTONS animation */
+            position: relative;
+        
+        
+            transition: all .2s ease-out;
+        }
+        
+        &--animated{
+            animation-name: hideAtStart;
+            animation-duration: 2s;
+        /* apply the custom animation styles of 0 %  brefore it starts */
+            animation-fill-mode: backwards;
+        }
+        
+        &:hover{
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+        }
+        
+        &:active{
+            transform: translateY(-.2rem);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+        
+        }
+        
+        &--white{
+            background-color: $text-color-white;
+            color: $text-color-grey;
+    
+            &::after{
+                background-color: white;
+            }
+        }
+        
+        /* BUTTON ANIMATION */
+        
+        &::after{
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        
+            z-index: -1;
+            
+            transition: all .4s ease-out;
+        }
+        
+        &:hover::after{
+            transform: scale(1.4);
+            opacity: 0;
+        }
+    }
+
+    .btn-s{
+        &:link,
+        &:visited{
+            display: inline-block;
+            text-decoration: none;
+            color: $text-color-grey;
+            padding: .5rem .8rem;
+            border-bottom: 1px solid $primary-color;
+            text-transform: capitalize;
+            transition: all .3s ease-in-out;
+            font-weight: 700;
+        }
+
+        &:hover{
+            background-color: $primary-color;
+            color: $text-color-white;
+        }
+    }

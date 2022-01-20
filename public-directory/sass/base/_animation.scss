@@ -1,0 +1,53 @@
+    /* Cool Css Custom animations */
+    
+    @keyframes moveInLeft {
+        0%{
+            opacity: 0;
+            transform: translateY(-10rem);
+        }
+        40%{
+            opacity: 0.2;
+        }
+        80%{
+            transform: translateY(2rem);
+    
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes moveInRight {
+        0%{
+            opacity: 0;
+            transform: translateY(10rem);
+        }
+        40%{
+            opacity: 0.2;
+        }
+        80%{
+            transform: translateY(-2rem);
+    
+        }
+        100%{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes hideAtStart{
+        0%{
+            opacity: 0;
+            visibility: hidden;
+        }
+        60%{
+            opacity: 0;
+            visibility: hidden;
+        }
+        100%{
+            opacity: 1;
+            visibility: visible;
+    
+        }
+    }

@@ -1,0 +1,45 @@
+.project-section{
+    padding-top: 18rem; //temporary
+    padding-bottom: 25rem;
+    background-color: $color-grey-light;
+    margin-top: -15.5rem;
+    width: 100%;
+
+    &__data{
+        display:flex;
+        justify-content: space-evenly;
+        &--content{
+            width: 45%;
+        }
+        &--album{
+            width: 45%;
+        }
+    }
+}
+
+.section-services{
+    padding: 20rem 0;
+    background-image: linear-gradient(to right,
+    rgba($primary-color, 0.8),
+    rgba($tertiary-color, 0.6)),
+     url(../img/apex-header-cover.jpg);
+     background-position: right;
+     background-size: cover;
+
+     transform: skewY(-8deg);
+
+     margin-top: -9rem;
+}
+
+.section-3d-card{
+    padding-top: 25rem;
+    padding-bottom: 15rem;
+    margin-top: -8rem;
+    background-color:$color-grey-light;
+}
+
+.footer{
+    padding: 3rem 0rem 2rem 0rem;
+    background-color: $color-grey-dark;
+}
+

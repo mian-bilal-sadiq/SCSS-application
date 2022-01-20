@@ -319,9 +319,13 @@ body {
 
 .section-3d-card {
   padding-top: 25rem;
-  padding-bottom: 50rem;
+  padding-bottom: 15rem;
   margin-top: -8rem;
   background-color: #f7f7f7; }
+
+.footer {
+  padding: 3rem 0rem 2rem 0rem;
+  background-color: #333; }
 
 .header {
   position: relative;
@@ -337,3 +341,50 @@ body {
     left: 4rem; }
   .header__logo {
     height: 8rem; }
+
+.footer__top {
+  display: inline-block;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 900;
+  letter-spacing: .2rem;
+  transition: all .3s ease-in-out;
+  margin-bottom: 5rem; }
+  .footer__top:hover {
+    transform: skewY(-3deg) scale(1.2);
+    color: lightgreen;
+    box-shadow: 0.3rem 1rem 1.3rem rgba(0, 0, 0, 0.5); }
+
+.footer__sub {
+  width: 40%;
+  border-top: 1px solid #777;
+  height: 20rem; }
+  .footer__sub__footer-nav {
+    padding-top: 2rem;
+    transform: translateX(-0.9rem); }
+    .footer__sub__footer-nav__links {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #f7f7f7;
+      text-transform: capitalize;
+      padding: 0.8rem 1.2rem;
+      transition: all .3s ease-out; }
+      .footer__sub__footer-nav__links:not(:last-child) {
+        margin-right: .2rem; }
+      .footer__sub__footer-nav__links:hover {
+        transform: scale(1.2);
+        color: lightgreen;
+        box-shadow: 0.3rem 1rem 1.3rem rgba(0, 0, 0, 0.5); }
+  .footer__sub__content {
+    padding-top: 2rem;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    color: #fff; }
+
+.copyright-claim {
+  margin-bottom: -2rem;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  color: #f7f7f7;
+  font-weight: 500; }

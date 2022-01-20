@@ -1,0 +1,47 @@
+.card-container{
+    width: 24%;
+}
+
+.d3-card{
+    height: 50rem;
+    position: relative;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    
+    &__side{
+        width: 100%;
+        height: 50rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+
+        transition: all 1s ease-in-out;
+        box-shadow: .5rem 1rem 1.5rem rgba(black, .4);
+
+            &--front{
+                transform: translateZ(2.5rem);
+                transform: rotateY(0);
+            }
+            &--back{
+                transform: rotateY(180deg);
+                &--1{
+                    background-image: linear-gradient(to right, rgba($card-1-primary, .6),rgba($card-1-secondary, .6),rgba($card-1-tertiary, .6));
+                }
+                &--2{
+                    background-image: linear-gradient(to right, rgba($card-2-primary, .6),rgba($card-2-secondary, .6));
+                }
+                &--3{
+                    background-image: linear-gradient(to right, rgba($card-3-secondary, .6),rgba($card-3-tertiary, .6));
+                }
+            }
+    }
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+
+    }
+}
+
