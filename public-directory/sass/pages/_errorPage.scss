@@ -1,0 +1,16 @@
+.section-error{
+    height: 100vh;
+    background-color: $color-grey-dark;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__message{
+        width: 40%;
+        margin-top: -20rem;
+    }
+}
+
+
+

@@ -151,11 +151,27 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+.error-heading {
+  font-size: 20rem;
+  color: #fff;
+  font-weight: bolder;
+  letter-spacing: 1rem;
+  margin-bottom: -5rem; }
+
+.paragraph--error {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.6rem; }
+
 #flex-container-fix {
   transform: skewY(0deg); }
 
 .align-fix {
   text-align: center; }
+
+#body-reset {
+  margin: 0;
+  padding: 0; }
 
 /* BUTTON */
 .btn {
@@ -211,6 +227,10 @@ body {
 .btn-s:hover {
   background-color: #00c3ff;
   color: #fff; }
+
+.btn-error {
+  color: #fff;
+  border: 2px solid white; }
 
 .album {
   position: relative; }
@@ -326,6 +346,17 @@ body {
 .footer {
   padding: 3rem 0rem 2rem 0rem;
   background-color: #333; }
+
+.section-error {
+  height: 100vh;
+  background-color: #333;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .section-error__message {
+    width: 40%;
+    margin-top: -20rem; }
 
 .header {
   position: relative;

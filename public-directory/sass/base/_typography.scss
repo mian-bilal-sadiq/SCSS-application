@@ -129,3 +129,19 @@ body{
         margin-bottom: 3rem;
     }
 }
+
+// Error Page Typography
+
+.error-heading{
+    font-size: 20rem;
+    color: $text-color-white;
+    font-weight: bolder;
+    letter-spacing: 1rem;
+    margin-bottom: -5rem;
+}
+
+.paragraph--error{
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.6rem;
+}
