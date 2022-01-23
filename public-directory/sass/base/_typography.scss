@@ -5,7 +5,16 @@ body{
     box-sizing: border-box;
     color: $text-color-grey;
     padding: 1rem;
+    padding-top: 0;
     line-height: 1.7;
+    @include mqm(tabPort){
+        margin: 0;
+        padding: 0;
+    }
+    @media(max-width: 75rem){
+        padding: 0;
+        margin: 0;
+    }
 }
 
 /* heading primary */
@@ -15,6 +24,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 60%;
     /* for BUTTON */
     text-align: center;
 }
@@ -31,13 +41,20 @@ body{
     &--main{
         display: block;
         font-size: 6rem;
-        font-weight: 400;
+        font-weight: 700;
         letter-spacing: 3.5rem;
     
         animation-name: moveInLeft;
         animation-duration:1s;
         animation-timing-function: ease-out;
         /* animation-iteration-count: number of times animation will run */
+        @media (max-width:81.25em) {
+            font-size: 5rem;
+            letter-spacing: 2.5rem;
+        }
+        @include mqm(tabLand){
+            font-size:5.5rem;
+        }
     }
     
     &--sub{
@@ -49,7 +66,11 @@ body{
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-    
+        @media (max-width:81.25em) {
+            letter-spacing: 0.5rem;
+        }
+        @include mqm(tabLand){}
+        font-size: 2rem;
     }
 }
 
@@ -57,13 +78,18 @@ body{
 
 .header__navigation{
     position: absolute;
-    top: 5.5rem;
-    left: 49rem;
+    top: 11%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 40%;
 }
 
 .nav-bar{
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // padding-top: 1.5rem;
+    // padding-bottom: 1.5rem;
     border-top: white .2rem solid;
     border-bottom: $text-color-white .2rem solid;
 
@@ -133,11 +159,11 @@ body{
 // Error Page Typography
 
 .error-heading{
-    font-size: 20rem;
+    font-size: 10rem;
     color: $text-color-white;
     font-weight: bolder;
     letter-spacing: 1rem;
-    margin-bottom: -5rem;
+    margin-bottom: 0rem;
 }
 
 .paragraph--error{

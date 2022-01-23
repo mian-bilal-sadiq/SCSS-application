@@ -25,6 +25,10 @@
             }
             &--back{
                 transform: rotateY(180deg);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 &--1{
                     background-image: linear-gradient(to right, rgba($card-1-primary, .6),rgba($card-1-secondary, .6),rgba($card-1-tertiary, .6));
                 }
@@ -43,5 +47,74 @@
         transform: rotateY(0deg);
 
     }
+
+    &__photo{
+        height: 17.8rem;
+        background-size: cover;
+        background-blend-mode: screen;
+        background-position: center;
+        background-repeat: no-repeat;
+        &--1{
+            background-image: linear-gradient(to right, rgba($card-1-primary, .6),rgba($card-1-secondary, .6),rgba($card-1-tertiary, .6)), url('../img/HTML.jpg');
+        }
+        &--2{
+            background-image: linear-gradient(to right, rgba($card-2-primary, .6),rgba($card-2-secondary, .6)), url('../img/React.png');
+        }
+        &--3{
+            background-blend-mode: darken;
+            background-image: linear-gradient(to right, rgba($card-3-secondary, .6),rgba($card-3-tertiary, .6)),  url('../img/Express.jpg');
+        }
+    }
+    &__heading{
+        font-size: 2.3rem;
+        font-weight: bolder;
+        color: $text-color-white;
+        text-transform: uppercase;
+        width: 60%;
+        text-align: right;
+        position: absolute;
+        top: 14rem;
+        right:2rem;
+        @include mqm(tabLand){
+            top: 12rem;
+        }
+        &-span--1{
+            padding: 1.2rem;    
+            background-image: linear-gradient(to right, rgba($card-1-primary, .8),rgba($card-1-secondary, .8),rgba($card-1-tertiary, .8));
+        }
+        &-span--2{
+            padding: 1.2rem;
+            background-image: linear-gradient(to right, rgba($card-2-primary, .8),rgba($card-2-secondary, .8));  
+        }
+        &-span--3{
+            padding: 1rem;
+            background-image: linear-gradient(to right, rgba($card-3-secondary, .8),rgba($card-3-tertiary, .8));
+        }
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__text{
+            margin-top: 6rem;
+            width: 70%;
+            height: 70%;
+            @include mqm(tabLand){
+             margin-top: 3rem;   
+            }
+        }
+    }
+}
+
+.para{
+    margin: 0rem;
+    &--white{
+        color: $text-color-white;
+    }
+}
+
+.back-heading{
+    color: $text-color-white;
+    font-size: 4rem;
 }
 

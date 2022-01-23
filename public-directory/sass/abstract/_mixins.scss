@@ -1,0 +1,24 @@
+//RESPONSIVE FUNCTIONALITY
+
+//breakpoints
+/*
+phone : 0-600px,          600px/16px = 37.25em 
+tab-port : 600px-900px    900px/16px = 56.25
+tab-land : 900px-1200px   1200px/16px = 75%
+big-screens : 1200px+                   75%+
+*/
+
+@mixin mqm($breakpoint){
+    @if $breakpoint == tabLand{
+        @media (max-width:75em) {@content}
+    }
+    @if $breakpoint == tabPort{
+        @media (max-width:56.25em) {@content}
+    }
+    @if $breakpoint == mobile{
+        @media (max-width:37.5em) { @content }
+    }
+    @if $breakpoint == bigDesk{
+        @media (min-width:112.5em) {@content}
+    }
+}

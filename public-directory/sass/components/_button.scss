@@ -75,15 +75,32 @@
             text-transform: capitalize;
             transition: all .3s ease-in-out;
             font-weight: 700;
+
+            box-shadow: .5rem .5rem 1rem rgba(black, .3);
         }
 
         &:hover{
             background-color: $primary-color;
             color: $text-color-white;
+            transform: translateY(-3px);
+            box-shadow: .5rem 1rem 1.5rem rgba(black, .4);
+
+        }
+        &:active{
+            transform: translateY(-1px);
+            box-shadow: .5rem .3rem .8rem rgba(black, .5);
+
+        }
+    }
+    .btn--stories{
+        border: 1px solid orange !important;
+        color: $text-color-white !important;
+        &:hover{
+            background-color: orange;
         }
     }
 //Error page button
-.btn-error{
-    color: $text-color-white;
-    border: 2px solid white;
+    .btn-error{
+        color: $text-color-white;
+        border: 2px solid white;
 }

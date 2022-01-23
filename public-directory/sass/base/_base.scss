@@ -24,7 +24,20 @@
 }
 
 html{
-    font-size: 62.6%;
+    font-size: 62.5%;
+
+    @include mqm(bigDesk){
+        font-size: 75%;
+    }
+    @include mqm(tabLand){
+        font-size: 58%;
+    }
+    @include mqm(tabPort){
+        font-size: 50%;
+    }
+    @include mqm(mobile){
+        font-size: 43.75%;
+    }
 }
 
 body{

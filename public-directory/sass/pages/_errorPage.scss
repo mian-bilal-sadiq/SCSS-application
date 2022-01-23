@@ -1,14 +1,20 @@
 .section-error{
-    height: 100vh;
+    height: 60vh;
     background-color: $color-grey-dark;
     text-align: center;
+    padding: 2rem;
+    padding-bottom: 10rem;
 
     display: flex;
     align-items: center;
     justify-content: center;
     &__message{
-        width: 40%;
+        width: 20%;
+        height: 50%;
         margin-top: -20rem;
+        @include mqm (mobile){
+            width: 40%;
+        }
     }
 }
 

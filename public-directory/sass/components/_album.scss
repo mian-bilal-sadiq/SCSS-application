@@ -1,6 +1,10 @@
 .album{
     position: relative;
 
+    @media(max-width:64.125em){
+        top: 6rem;
+    }
+
     & img{
         width: 45%;
         box-shadow: .5rem 1rem 2rem rgba(black, 0.5);
@@ -26,6 +30,9 @@
     &__3{
         top: 37%;
         left: 28%;
+        @media (max-width:71.625em) {
+            top : 20%;           
+        }
     }
 
     &:hover &-img:not(:hover){

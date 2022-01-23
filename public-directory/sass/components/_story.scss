@@ -1,0 +1,78 @@
+.story{
+    width: 60%;
+    padding: 6rem;
+    padding-left: 9rem;
+    color: $text-color-grey;
+
+    margin: 0 auto;
+    margin-bottom: 10rem;
+
+    background-color: rgba($text-color-white, 0.6);
+    box-shadow: 0 1rem 1.5rem rgba(black, 0.4);
+
+    transform: skewX(-12deg);
+
+    &__shape{
+        float: left;
+        width: 15rem;
+        height: 15rem;
+
+        position: relative;
+
+        background-position: center;
+        background-size: cover;
+
+        transform: translateX(-3rem) skewX(12deg);
+        -webkit-shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
+
+        &__img{
+            height: 120%;
+            transition: all .4s ease-in-out;
+            transform:translateX(-1rem) scale(1.1);
+
+        }
+
+    }
+    &__text{
+        transform: skewX(12deg);
+
+    }
+    &__caption{
+        color: $text-color-white-light;
+        font-size: 1.7rem;
+        font-weight: 700;
+        text-transform: capitalize;
+
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 0;
+
+        transition: all .4s ease-in-out;
+    }
+    &:hover &__caption{
+        top: 50%;
+        opacity: 1;
+    }
+    &:hover &__shape__img{
+        //because of blur a lign is appearing on the left side of image on hover
+        //working on it 
+        filter: blur(3px) brightness(80%);
+        backface-visibility: hidden;
+        transform:translateX(-1.5rem) scale(1);
+    }
+}
+
+.video{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: .6;
+    background-position: center;
+    overflow: hidden;
+}

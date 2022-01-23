@@ -11,11 +11,15 @@ const port = process.env.PORT || 3000
 //Public for static
 const publicDirectory = path.join(__dirname, '../public-directory')
 const viewsPath = path.join(__dirname, "../template/views")
+const partialsDirectory = path.join(__dirname, "../template/partials")
 
 //view engine
 app.use(express.static(publicDirectory))
+
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
+
+hbs.registerPartials(partialsDirectory)
 // for sending data for static pages:
 
 // app.get('/*', (req, res)=>{
@@ -33,7 +37,7 @@ app.get('', (req,res)=>{
 
 app.get('*', (req,res)=>{
     res.render('errorPage',{
-        test: true
+        test: true  
     })
 })
 

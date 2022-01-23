@@ -51,3 +51,12 @@
     
         }
     }
+
+    @keyframes textSlider{
+        0%{
+            transform: translateX(140rem);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }

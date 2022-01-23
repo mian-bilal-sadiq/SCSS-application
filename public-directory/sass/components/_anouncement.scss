@@ -1,0 +1,35 @@
+.anouncement{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    margin: .5rem 0rem;
+    overflow: hidden;
+    position: relative;
+        &__heading{
+            display: inline-block;
+            font-size: 2.5rem;
+            font-family: serif;
+            margin-left: 2rem;
+            font-weight: bolder;
+            text-transform: capitalize;
+            display: inline-block;
+            text-shadow: .5rem 1rem 2rem rgab(black, .4);
+            margin:0.5rem 0;
+
+            animation: textSlider 20s linear infinite;
+            @media (max-width: 58em) {
+                font-size: 2rem;
+            }
+    }
+    &__arrow{
+        position: absolute;
+        top: 0;
+        right: 0;
+        float: right;
+        border: 2.5rem solid transparent;
+        border-right: 2.5rem solid black;
+        @media (max-width: 58em) {
+            border: 2rem solid transparent;
+            border-right: 2rem solid black;
+        }
+    }
+}
